@@ -1,0 +1,12 @@
+// Postal_Code - Ensures that Zip code only has 6 letters, no alphabets and works ONLY if the zipcode isn't blank
+AND(
+OR(
+LEN( Zip_Postal_code__c ) <> 6, NOT(REGEX(Zip_Postal_code__c, "^[0-9]{6}$"))
+),
+NOT(ISBLANK(Zip_Postal_code__c))
+)
+// Error Message - Must contain 6 digits
+
+// ValidationRule_For_JewelCustomerObject - Ensures the following fields aren't left blank
+OR( ISBLANK( City__c ) , ISBLANK( Country__c ),ISBLANK( Phone__c ),ISBLANK( State__c ),ISBLANK( Street__c ) )
+// Error Message -	Please fill Required fields
