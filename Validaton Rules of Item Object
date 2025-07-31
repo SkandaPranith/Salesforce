@@ -1,0 +1,5 @@
+// ValidationRule_For_Item
+
+OR( ISBLANK(  Amount__c  ) , ISBLANK(  Customer_Name__c  ) ,ISBLANK( Gold_Price__c ),ISBLANK( KDM__c ),
+ISBLANK( Ornament__c ),ISBLANK( Percentage__c ),ISBLANK( Making_Charges__c ),ISBLANK( Prices__c ),ISBLANK( Stone_Weight__c ),
+ISBLANK( Silver_Price__c ),ISBLANK( Stone_Other_Price__c ),ISBLANK( Stone_Weight__c ),ISBLANK( Weight__c ))
