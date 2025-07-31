@@ -1,0 +1,20 @@
+// Field - Gold Price
+Prices__r.Gold_Price__c / 10
+
+// Field - Silver Price
+(Prices__r.Silver_Price__c / 1000)
+
+// Field - Purity Gold Price
+((Prices__r.Gold_Price__c * Purity__c ) / 24) / 10
+
+// Field - Total Weight
+(Weight__c - Stone_Weight__c)
+
+// Field - Amount
+IF(ISPICKVAL( Item_Type__c ,"Gold"), Total_Weight__c * Purity_Gold_Price__c , Total_Weight__c * Silver_Price__c )
+
+// Field - KDM 
+(Amount__c * Percentage__c ) / 100
+
+// Field - Making Charges
+IF(ISPICKVAL( Item_Type__c ,"Gold"), Weight__c * 300 , Weight__c * 10 )
