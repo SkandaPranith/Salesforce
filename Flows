@@ -1,0 +1,16 @@
+// Flow to automate the sending of a email, which tells the customer that their order has been received and is being processed.
+
+// Email Body - View as Plain Text is absolutely needed
+Hello! Thank you for visiting us today.
+We’re happy to let you know that your order has been received and is now being processed. Please verify the details below and if there are any discrepancies, please let us know. Thank you!
+Customer Name: {!$Record.Item__r.Customer_Name__r.Name}
+Here are the details for the item you purchased with Jewellery Inventory System
+Item Type: {!$Record.Item__r.Item_Type__c}
+Ornament: {!$Record.Ornament__c}
+Weight: {!$Record.Weight__c} grams
+Amount: {!$Record.Amount__c}
+
+// Recipient Adress List
+{!$Record.Item__r.Customer_Name__r.Email__c}
+
+
