@@ -1,0 +1,27 @@
+// Field - Amount
+Item__r.Amount__c
+
+// Field - Gold / Silver Price
+IF(ISPICKVAL( Item__r.Item_Type__c ,"Gold"), Item__r.Gold_Price__c , Item__r.Silver_Price__c )
+
+// Field - KDM Charge
+Item__r.KDM__c
+
+// Field - Making Charges
+Item__r.Making_Charges__c
+
+// Field - Ornament
+Item__r.Ornament__c
+
+// Field - Stone Weight
+Item__r.Stone_Weight__c
+
+// Field - Stones/Other Price
+Item__r.Stone_Other_Price__c
+
+// Field - Total Amount
+Amount__c + KDM_Charge__c + Stones_other_price__c + Making_Charges__c
+
+// Field - Weight
+Item__r.Total_Weight__c
+
